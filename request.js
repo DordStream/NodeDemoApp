@@ -4,3 +4,4 @@ module.exports.showStudent = function(){
     axios.get(url).then((response)=> console.log(JSON.stringify(response.data.data))).catch((error)=> console.log(error));
 
 }
+
