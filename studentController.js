@@ -5,7 +5,7 @@ db.userName ="demoUsername";
 db.password ="demopassword";
 db.databeseName = "mydb";
 let tableName ="student";
-const origin ="https://dordstream.github.io/";
+const origin ="*";//"https://dordstream.github.io/";
 module.exports.create = function(req,res,next){
   
     var result ={message: "",status:true, data:null};

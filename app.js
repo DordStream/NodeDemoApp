@@ -13,7 +13,7 @@ const corsOption = {
     origin: 'https://dordstream.github.io/',
     optionsSuccessStatus: 200
 }
-app.use(cors(corsOption));
+//app.use(cors(corsOption));
 //End Security Layer
 
 //API
