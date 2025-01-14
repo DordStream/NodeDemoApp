@@ -28,7 +28,7 @@ module.exports.create = function(req,res,next){
             result.status = true;
              result.message ="The Student \"" +  trimmedName +  "\"" + " Record has been added"; 
         }
-        res.header("Access-Control-Allow-Origin",origin);
+        //res.header("Access-Control-Allow-Origin",origin);
         
       //res.header('Access-Control-Allow-Methods','GET,POST');
      //res.header('Access-Control-Allow-Headers','Content-Type, Authorization');
@@ -52,7 +52,7 @@ module.exports.showStudent = function(req,res,next){
         
         result.message ="The Student Records Retrieved";
         result.data = data;
-        res.header("Access-Control-Allow-Origin",origin);
+        //res.header("Access-Control-Allow-Origin",origin);
         //res.header('Access-Control-Allow-Methods','GET,POST');
   //res.header('Access-Control-Allow-Headers','Content-Type, Authorization');
          res.json(result);
@@ -88,7 +88,7 @@ module.exports.update = function(req,res,next){
          
           result.message ="The Student \"" +  model.name+  "\"" + " Record has been updated"; 
         }
-        res.header("Access-Control-Allow-Origin",origin);  
+        //res.header("Access-Control-Allow-Origin",origin);  
         //res.header('Access-Control-Allow-Methods','GET,POST');
   //res.header('Access-Control-Allow-Headers','Content-Type, Authorization');
        res.json(result);
@@ -110,7 +110,7 @@ module.exports.find = function(req,res,next){
     var id = req.params.id;
   db.first(tableName,{_id: new ObjectId(id)},(response)=>{
    result.data = response;
-   res.header("Access-Control-Allow-Origin",origin);
+   //res.header("Access-Control-Allow-Origin",origin);
   // res.header('Access-Control-Allow-Methods','GET,POST');
  // res.header('Access-Control-Allow-Headers','Content-Type, Authorization');
    res.json(result);
@@ -143,7 +143,7 @@ module.exports.delete = function(req,res,next){
      result.status = false;
      
     }
-    res.header("Access-Control-Allow-Origin",origin);
+   // res.header("Access-Control-Allow-Origin",origin);
    // res.header('Access-Control-Allow-Methods','GET,POST');
   //res.header('Access-Control-Allow-Headers','Content-Type, Authorization');
     res.json(result);
