@@ -13,7 +13,7 @@ const corsOption = {
     origin: "*",
     optionsSuccessStatus: 200
 }
-//app.use(cors(corsOption));
+app.use(cors());
 //End Security Layer
 
 //API
