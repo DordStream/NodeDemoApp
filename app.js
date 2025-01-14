@@ -10,7 +10,7 @@ const port = process.env.PORT || 7000;
 app.use(express.json());
 //Security Layer
 const corsOption = {
-    origin: 'https://dordstream.github.io/NodePage'
+    origin: '*'
 }
 app.use(cors(corsOption));
 //End Security Layer
