@@ -5,12 +5,13 @@ db.userName ="demoUsername";
 db.password ="demopassword";
 db.databeseName = "mydb";
 let tableName ="student";
-
+const origin ="https://dordstream.github.io/";
 module.exports.create = function(req,res,next){
   
     var result ={message: "",status:true, data:null};
     try{
     var model = req.body;
+
 
     if(model == null || model == undefined) throw new Error("the model can not be null or undefined");
     let trimmedName = model.name.toString().trim();
@@ -27,7 +28,7 @@ module.exports.create = function(req,res,next){
             result.status = true;
              result.message ="The Student \"" +  trimmedName +  "\"" + " Record has been added"; 
         }
-        
+        res.header("Access-Control-Allow-Origin",origin);
        res.json(result);
     });
     }
@@ -48,6 +49,7 @@ module.exports.showStudent = function(req,res,next){
         
         result.message ="The Student Records Retrieved";
         result.data = data;
+        res.header("Access-Control-Allow-Origin",origin);
          res.json(result);
       
      });
@@ -81,7 +83,7 @@ module.exports.update = function(req,res,next){
          
           result.message ="The Student \"" +  model.name+  "\"" + " Record has been updated"; 
         }
-        
+        res.header("Access-Control-Allow-Origin",origin);  
        res.json(result);
    
  });
@@ -101,6 +103,7 @@ module.exports.find = function(req,res,next){
     var id = req.params.id;
   db.first(tableName,{_id: new ObjectId(id)},(response)=>{
    result.data = response;
+   res.header("Access-Control-Allow-Origin",origin);
    res.json(result);
  });
 
@@ -131,6 +134,6 @@ module.exports.delete = function(req,res,next){
      result.status = false;
      
     }
-    
+    res.header("Access-Control-Allow-Origin",origin);
     res.json(result);
 }
