@@ -12,7 +12,7 @@ app.use(express.json());
 const corsOption = {
     origin: '*'
 }
-app.use(cors(corsOption));
+//app.use(cors(corsOption));
 //End Security Layer
 
 //API
