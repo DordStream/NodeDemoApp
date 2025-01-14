@@ -1,8 +1,8 @@
 
 const { ObjectId } = require('mongodb');
 const db = require('./database');
-db.userName ="test";
-db.password ="abc123";
+db.userName ="demoUsername";
+db.password ="demopassword";
 db.databeseName = "mydb";
 let tableName ="student";
 

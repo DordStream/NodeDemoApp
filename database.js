@@ -1,7 +1,7 @@
 
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-module.exports.databaseHost ="mongodb://127.0.0.1:27017/";
+module.exports.databaseHost ="mongodb+srv://demoUsername:demopassword@cluster0.4x129.mongodb.net/";   //"mongodb://127.0.0.1:27017/";
 module.exports.userName ="";
 module.exports.password ="";
 module.exports.databeseName ="";
